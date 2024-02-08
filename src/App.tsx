@@ -6,9 +6,9 @@ import { ThemeProvider } from "react-bootstrap";
 export const App: FC = () => {
     return (
         <ThemeProvider>
-            <BrowserRouter>
-                <Router></Router>
-            </BrowserRouter>
+            {/* <BrowserRouter> */}
+            <Router></Router>
+            {/* </BrowserRouter> */}
         </ThemeProvider>
     );
 };
