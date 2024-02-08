@@ -1,0 +1,169 @@
+@import "../../styles/index.scss";
+
+.invitationHeaderContent {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.groundLamps {
+    top: -5vh;
+    left: 51vh;
+    width: 51vw;
+    max-width: 700px;
+    position: absolute;
+    transform: rotate(7deg);
+    @media only screen and (max-width: 1024px) {
+        top: -4vh;
+        left: 30%;
+        width: 66vw;
+        transform: rotate(8deg);
+        min-width: 500px;
+    }
+}
+.blurredWrapper {
+    width: 71%;
+    animation: 1s rising ease;
+    display: flex;
+    justify-content: center;
+    opacity: 0.47;
+    min-height: 250px;
+    margin-top: 32px;
+    .groundCircle {
+        width: 80%;
+        min-width: 270px;
+        margin-right: 45px;
+    }
+}
+.newlywedsInfo {
+    position: absolute;
+    top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .newlyweds {
+        font-family: Lobster, sans-serif;
+        font-size: 5vw;
+        color: #0e1e4d;
+        text-shadow: #fff 3px 3px 10px;
+        @media only screen and (max-width: 580px) {
+            font-size: 26px !important;
+        }
+    }
+    @media only screen and (max-width: 992px) {
+        top: 250px;
+    }
+
+    .commonDate {
+        margin-top: 26px;
+        font-family:
+            Bad Script,
+            sans-serif;
+        color: #3c3a3d;
+        font-size: 3vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-weight: bold;
+        .smallDate {
+            font-size: 2.5vw;
+            font-weight: bold;
+            @media only screen and (max-width: 580px) {
+                font-size: 19px !important;
+            }
+        }
+        .numberDate {
+            margin: 0 10px;
+            padding-top: 10px;
+            text-shadow:
+                2px 7px 5px rgba(0, 0, 0, 0.2),
+                0px -4px 10px #fff;
+        }
+        .subDate {
+            display: inline-flex;
+            font-size: 2.5vw;
+            text-shadow:
+                2px 7px 5px rgba(0, 0, 0, 0.3),
+                0px -4px 10px #fff;
+            border-top: 1px solid var(--light-grey);
+            border-bottom: 1px solid var(--light-grey);
+            @media only screen and (max-width: 580px) {
+                font-size: 19px !important;
+            }
+        }
+        @media only screen and (max-width: 580px) {
+            font-size: 22px !important;
+        }
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rising {
+    0% {
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+}
+
+.saveDate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    min-width: 200px;
+    .calendar {
+        display: flex;
+        padding: 5px;
+        justify-content: space-around;
+        background-color: #fff;
+        box-shadow: 0 0 20px 10px #fff;
+        border-radius: 20px;
+        position: relative;
+        z-index: 30;
+        width: 100%;
+        margin-bottom: 10px;
+
+        .dayDate {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 8px 6px;
+            margin: 0 5px;
+            .name {
+                font-family: var(--main-header);
+            }
+            .eventDate {
+                font-weight: bold;
+                color: white;
+            }
+        }
+        .heart {
+            position: absolute;
+            left: calc(50% - 15px);
+            top: 23px;
+            width: 36px;
+            z-index: -1;
+        }
+    }
+    .saveTheDate {
+        color: var(--light-grey);
+        font-family: var(--main-text);
+        margin-bottom: 20px;
+    }
+}
