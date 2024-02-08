@@ -43,7 +43,7 @@ export const InvationModule: FC = () => {
         mode: "onBlur",
         defaultValues: {
             ...family,
-            persons: family.persons,
+            persons: family?.persons,
         },
     });
 
@@ -67,7 +67,7 @@ export const InvationModule: FC = () => {
         !!location.pathname.slice(1) && getFamily(location.pathname.slice(1));
     }, []);
     useEffect(() => {
-        if (!!family.persons) {
+        if (!!family?.persons) {
             const fields = family.persons?.map(
                 (el) => el as { id: string; name: string },
             );

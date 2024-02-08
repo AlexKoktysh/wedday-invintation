@@ -1,5 +1,5 @@
 export const paths = {
-    HOME: "/wedday-invintation/",
-    USER: "/wedday-invintation/:id",
+    HOME: "/",
+    USER: "/:id",
     ADMIN: "/wedday-invintation/administration-panel",
 };
